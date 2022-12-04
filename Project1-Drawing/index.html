@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=index.css>
+</head>
+  
+<body>
+    <h1>CSC4130 Assignment 1 (Xinyu Xie)</h1>
+    <h2>draw and erase anything you want</h2>
+    <hr>
+    <!--  define a canvas (5pts) -->
+    <canvas id="myCanvas" width="800" height="500" style="border:1px solid #000000;"></canvas>
+
+    <!--  define two buttons which are used for drawing and erasing
+          and label the two buttons as draw and erase (6pts) -->
+    <button id="draw" onclick="changeMode('draw')">draw</button>
+    <button id="erase" onclick="changeMode('erase')">erase</button>
+
+    <!--  define three radios which are used for changing colors (green, red, and blue)
+          and label the three radios as green, red, and blue (9pts)-->
+    <div id="color">
+        <input type="radio" id="green" name="linecolor" value="Green">
+        <label for="green">Green</label>
+        <input type="radio" id="red" name="linecolor" value="Red">
+        <label for="red">Red</label>
+        <input type="radio" id="blue" name="linecolor" value="Blue">
+        <label for="blue">Blue</label>
+    </div>
+    
+    <!--  define a range slider which are used for controling the line width
+           , label it as "Line Width" and show the corresponding value below the slider bar (5pts)-->
+    <input type="range" id="linecap" name="lineWidth" min="1" max="10" value="1" step="1">
+    <label for="linecap">Line Width</label>
+    <p>Value: <span id="value"></span></p>
+
+    <script src="src/index.js"></script>
+</body>
+  
+</html>
